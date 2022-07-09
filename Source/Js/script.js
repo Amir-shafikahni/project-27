@@ -32,7 +32,7 @@ function textGenerate(event){
 
     paragraphContainer.innerHTML = ""
 
-    if(inputElem.value <= 0){
+    if(inputElem.value <= 0 || inputElem.value === "" || isNaN(inputElem.value)){
         inputElem.value = 1
     }
 
