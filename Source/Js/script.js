@@ -18,7 +18,6 @@ const dummyText = [
     'Gingerbread bonbon pudding biscuit sugar plum. Donut caramels cake danish lollipop. Chocolate bar jelly dessert candy canes. Sweet sesame snaps cookie. Croissant bear claw chocolate powder jelly beans ice cream. Bear claw brownie icing apple pie. Ice cream marshmallow tiramisu cotton candy brownie tiramisu jujubes. Croissant cheesecake tiramisu wafer powder pie macaroon.',
     'Powder cake croissant tootsie roll tart lollipop jelly beans. Cake lemon drops wafer muffin biscuit marshmallow brownie. Cotton candy jelly-o cotton candy gummies. Cake sesame snaps macaroon tootsie roll. Pie wafer topping tootsie roll apple pie marzipan sweet. Bonbon tootsie roll candy canes pastry brownie bear claw.',
   ];
-let paragraphsCount = 9
 
 
 // fucntions ///////////////////
@@ -29,21 +28,21 @@ function liveUserScreenHeight(){
 }
 
 function textGenerate(){
-    let paragragh = 0
+    let paragraghCounter = 0
 
     paragraphContainer.innerHTML = ""
 
     for(let i = inputElem.value ; i > 0 ; i--){
         let newParagraph = $.createElement("p")
         
-        if(paragragh >= paragraphsCount){
-            paragragh = 0
+        if(paragraghCounter >= dummyText.length){
+            paragraghCounter = 0
         }
-        newParagraph.innerHTML = dummyText[paragragh]
+        newParagraph.innerHTML = dummyText[paragraghCounter]
 
         paragraphContainer.append(newParagraph)
 
-        paragragh++
+        paragraghCounter++
     }
 }
 
