@@ -27,10 +27,14 @@ function liveUserScreenHeight(){
     body.style.minHeight = userScreenHeight
 }
 
-function textGenerate(){
+function textGenerate(event){
     let paragraghCounter = 0
 
     paragraphContainer.innerHTML = ""
+
+    if(inputElem.value <= 0){
+        inputElem.value = 1
+    }
 
     for(let i = inputElem.value ; i > 0 ; i--){
         let newParagraph = $.createElement("p")
